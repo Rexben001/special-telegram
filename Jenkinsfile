@@ -15,7 +15,7 @@ pipeline {
     parameters {
         string(name: 'VERSION', defaultValue: '1.01', description: 'Version umber')
         choice(name: 'VERSION_TAGS', choices: ['js', 'ts', 'cs', 'ns'], description: 'version tags array')
-        booleanParams(name: 'BUILDS', defaultValue: true, description: 'Builds feedback')
+        booleanParam(name: 'BUILDS', defaultValue: true, description: 'Builds feedback')
     }
     stages {
         stage('build') {
